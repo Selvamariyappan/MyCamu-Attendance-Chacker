@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    text-align: center;
+    min-width: 320px;
+}
+
+h1 {
+    color: #f76b1c;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #fda085;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+    border: 1.5px solid #f76b1c;
+}
+
+button {
+    background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(250, 140, 60, 0.1);
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.result {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #f76b1c;
+    min-height: 1.5em;
+    font-weight: 500;
+}
