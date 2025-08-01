@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Input Result Page</title>
+    <title>Camu Attendance Checker</title>
+    <link rel="icon" type="image/png" href="Untitled-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Input Result Demo</h1>
-        <label for="input1">Input 1:</label>
+        <img src="camulogov2.png" alt="Camu Logo" style="height:48px; margin-bottom: 0.5rem; display:block; margin-left:auto; margin-right:auto;">
+        <h1>MyCAMU Attendance Checker</h1>
+        <label for="input1"> Total No. Of Periods : </label>
         <input type="text" id="input1" />
         <br><br>
-        <label for="input2">Input 2:</label>
+        <label for="input2">No. Of Periods Present : </label>
         <input type="text" id="input2" />
         <br><br>
-        <button onclick="showResult()">Show Result</button>
-        <div id="result" class="result"></div>
+        <button onclick="showResult()">Show My Percentage</button>
+        <br>
+        <div id="result" class="result" style="display:none;"></div>
     </div>
     <script src="script.js"></script>
 </body>
