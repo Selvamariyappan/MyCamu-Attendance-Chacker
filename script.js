@@ -1,5 +1,7 @@
 document.getElementById('attendance-form').addEventListener('submit', function(event) {
     event.preventDefault();
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'none'; // Hide before calculation
     showResult();
 });
 
