@@ -1,14 +1,25 @@
+document.getElementById('attendance-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    showResult();
+});
+
 function showResult() {
-    const input1 = parseFloat(document.getElementById('input1').value);
-    const input2 = parseFloat(document.getElementById('input2').value);
+    const totalPeriods = parseFloat(document.getElementById('total-periods').value);
+    const periodsPresent = parseFloat(document.getElementById('periods-present').value);
     const resultDiv = document.getElementById('result');
-    if (!isNaN(input1) && input1 !== 0 && !isNaN(input2)) {
-        const result = (input2 / input1) * 100;
-        const roundedResult = (result % 1 >= 0.5) ? Math.ceil(result) : Math.floor(result);
-        resultDiv.textContent = `Overall percentage : ${roundedResult}%`;
+
+    if (!isNaN(totalPeriods) && totalPeriods !== 0 && !isNaN(periodsPresent)) {
+        if (periodsPresent > totalPeriods) {
+            resultDiv.textContent = 'Periods present cannot be greater than total periods.';
+            resultDiv.style.display = 'inline-block';
+            return;
+        }
+        const result = (periodsPresent / totalPeriods) * 100;
+        const roundedResult = Math.round(result);
+        resultDiv.textContent = `Overall percentage: ${roundedResult}%`;
         resultDiv.style.display = 'inline-block';
     } else {
-        resultDiv.textContent = 'Please enter valid numbers (input 1 must not be zero).';
+        resultDiv.textContent = 'Please enter valid numbers (total periods must not be zero).';
         resultDiv.style.display = 'inline-block';
     }
 }
