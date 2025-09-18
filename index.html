@@ -1,27 +1,38 @@
-<!-- Updated by selvamariyappan to trigger GitHub rebuild -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camu Attendance Checker</title>
+    <title>MyCamu Attendance Checker</title>
     <link rel="icon" type="image/png" href="Untitled-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <img src="camulogov2.png" alt="Camu Logo" style="height:48px; margin-bottom: 0.5rem; display:block; margin-left:auto; margin-right:auto;">
-        <h1>MyCAMU Attendance Checker</h1>
-        <label for="input1"> Total No. Of Periods : </label>
-        <input type="text" id="input1" />
-        <br><br>
-        <label for="input2">No. Of Periods Present : </label>
-        <input type="text" id="input2" />
-        <br><br>
-        <button onclick="showResult()">Show My Percentage</button>
-        <br>
-        <div id="result" class="result" style="display:none;"></div>
+        <header class="header">
+            <img src="camulogov2.png" alt="Camu Logo" class="logo">
+            <h1>MyCAMU Attendance Checker</h1>
+        </header>
+        <main>
+            <form id="attendance-form" class="attendance-form">
+                <div class="form-group">
+                    <label for="total-periods">Total Number of Periods</label>
+                    <input type="number" id="total-periods" placeholder="e.g., 50" required>
+                </div>
+                <div class="form-group">
+                    <label for="periods-present">Number of Periods Present</label>
+                    <input type="number" id="periods-present" placeholder="e.g., 45" required>
+                </div>
+                <button type="submit" class="btn">Calculate My Percentage</button>
+            </form>
+        </main>
+        <section>
+            <div id="result" class="result" style="display:none;"></div>
+        </section>
+        <footer>
+            <p>&copy; 2024 MyCamu Attendance Checker. All Rights Reserved.</p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
